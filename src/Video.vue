@@ -1,6 +1,8 @@
 <template>
   <!-- Video Area Started -->
-  <div class="video_wrap" id="video_wrap">
+  <div class="video_wrap" id="video_wrap"
+       :style="this.$parent.$data.mix_data.slide_mover"
+       @click="$parent.$options.methods.only_close">
     <div class="video_basket" id="video_basket">
 
       <!-- Youtube -->
@@ -68,6 +70,7 @@
     top: 0; right: 0; bottom: 0; left: 0;
     overflow: hidden;
     z-index: 10;
+    transition: all 350ms cubic-bezier(.83,.01,.46,.86);
   }
 
   .video_basket {

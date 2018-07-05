@@ -52,7 +52,10 @@
           grid image
         </div>
         <div class="logo_floor_3">
-
+          <p>카메라의 초점을 맞추는 형태의 테두리는 엘씨벤처스의 집중력과 팀워크를 나타내며</p>
+          <p>테두리의 위, 아래, 양옆으로 트여 있는 부분은 클라이언트와의 원활한 커뮤니케이션을 뜻하기도 합니다.</p>
+          <p>또한 지나치게 두껍지도 않고 얇지도 않은 적당한 선의 두께는 엘씨벤처스 직원들의 변함없는 열정과 끈기를 나타냅니다.</p>
+          <p>셀씨베처스 심볼은 마케팅기업다운 디자인적인 세련미와 심플함을 놓치지 않고 표현 했습니다.</p>
         </div>
       </div>
 
@@ -61,7 +64,7 @@
 
     <section class="section_3">
 
-      <div>
+      <div class="organization">
 
       </div>
 
@@ -70,7 +73,7 @@
 
     <section class="section_4">
 
-      <div>
+      <div class="map">
 
       </div>
 
@@ -118,6 +121,7 @@
       color: #fdfdfd;
       font-size: 38px;
       font-weight: bold;
+      font-family: 'Nanums_regular';
     }
     .division_bar {
       width: 60px;
@@ -126,6 +130,7 @@
       margin: 10px auto 15px;
     }
     p {
+      font-family: 'Nanums_regular';
       color: #fdfdfd;
       font-size: 15px;
     }
@@ -134,13 +139,47 @@
 
   .logo_explain {
     padding: 50px 0;
+    text-align: center;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
   .logo_floor_1 {
+    padding: 5px 0 15px;
     span {
-
+      font-family: 'Nanums_regular';
+      display: inline-block;
+      height: 25px;
+      vertical-align: middle;
+      padding: 0 5px;
     }
     img {
       height: 25px;
     }
+  }
+
+  .logo_floor_2 {
+    height: 300px;
+    background-color: #e5f5ff;
+  }
+
+  .logo_floor_3 {
+    font-family: 'Nanums_regular';
+    font-size: 16px;
+    padding: 4px 0;
+    p {
+      padding: 3px 0;
+    }
+  }
+  .organization {
+    height: 400px;
+    background-color: #2c3e50;
+  }
+
+  .map {
+    height: 400px;
+    background-color: #42b983;
   }
 </style>
