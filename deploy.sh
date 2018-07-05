@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+
+echo 'gogo virtual'
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export WORKON_HOME=/home/ubuntu/Env
+source /usr/local/bin/virtualenvwrapper.sh
+workon Lcventures
+echo 'Done...'
+
+
 echo 'Running npm install & npm build'
 npm set progress=false && npm install -s --no-progress && npm run build
 echo 'Done...'
