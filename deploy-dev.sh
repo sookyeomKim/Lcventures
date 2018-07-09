@@ -14,3 +14,7 @@ echo 'Done...'
 echo 'Collect static'
 python3 manage.py collectstatic --noinput
 echo 'Done...'
+
+echo 'Collect static'
+python3 manage.py runserver
+echo 'Done...'
