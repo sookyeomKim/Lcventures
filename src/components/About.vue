@@ -2,7 +2,7 @@
   <div class="main_role" id="main_role"
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
-<!--
+    <!--
     <img class="main_image" src="../assets/pages/about/about_low.jpg" alt="page background image">
 -->
 
@@ -64,7 +64,49 @@
 
     <section class="section_3">
 
-      <div class="organization">
+      <div class="history">
+
+        <div class="center_line"></div>
+
+        <div class="history_floor">
+          <div class="contents_wrap">
+            <div class="inner_image right"></div>
+            <div class="inner_text right">text</div>
+          </div>
+          <div class="dummy"></div>
+        </div>
+
+        <div class="history_floor">
+          <div class="dummy"></div>
+          <div class="contents_wrap">
+            <div class="inner_image left"></div>
+            <div class="inner_text left">text</div>
+          </div>
+        </div>
+
+        <div class="history_floor">
+          <div class="contents_wrap">
+            <div class="inner_image right"></div>
+            <div class="inner_text right">text</div>
+          </div>
+          <div class="dummy"></div>
+        </div>
+
+        <div class="history_floor">
+          <div class="dummy"></div>
+          <div class="contents_wrap">
+            <div class="inner_image left"></div>
+            <div class="inner_text left">text</div>
+          </div>
+        </div>
+
+        <div class="history_floor">
+          <div class="contents_wrap">
+            <div class="inner_image right"></div>
+            <div class="inner_text right">text</div>
+          </div>
+          <div class="dummy"></div>
+        </div>
 
       </div>
 
@@ -73,19 +115,60 @@
 
     <section class="section_4">
 
-      <div class="map">
-
+      <div class="map_wrap">
+        <vue-daum-map class="daum_map"
+          :appKey="appKey"
+          :center.sync="center"
+          :level.sync="level"
+          :mapTypeId="mapTypeId"
+          :libraries="libraries"
+          @load="onLoad"
+          @center_changed=""
+          @zoom_start=""
+          @zoom_changed=""
+          @bounds_changed=""
+          @click=""
+          @dblclick=""
+          @rightclick=""
+          @mousemove=""
+          @dragstart=""
+          @drag=""
+          @dragend=""
+          @idle=""
+          @tilesloaded=""
+          @maptypeid_changed=""
+        >
+        </vue-daum-map>
+        <div class="map_info">서울 성동구 뚝섬로 1길 25 한라에코밸리 206호</div>
       </div>
 
     </section>
     <!--section 4-->
 
   </div><!--Main role-->
+
 </template>
 
 <script>
+  import VueDaumMap from 'vue-daum-map'
+
   export default {
-    name: 'about'
+    name: 'about',
+    data: () => ({
+      // eslint-disable-next-line
+      appKey: 'c7907ca3d547898728698e99b7c45d01', // Kakao Js app key
+      center: {lat: 37.543607, lng: 127.046351}, // Starting Latitude, Longitude
+      level: 2, // Zoom level
+      mapTypeId: VueDaumMap.MapTypeId.NORMAL, // Map type
+      libraries: [], // Add library
+      map: null // Map object. Access after map loaded.
+    }),
+    methods: {
+      // If map load completed, run load event.
+      onLoad (map) {
+        this.map = map
+      }
+    }
   }
 </script>
 
@@ -112,7 +195,9 @@
     color: #515151;
     font-family: Impact, sans-serif;
     z-index: 2000;
-  }/* section 1 end */
+  }
+
+  /* section 1 end */
 
   .lc_slogan {
     padding: 50px 0;
@@ -121,7 +206,7 @@
       color: #fdfdfd;
       font-size: 38px;
       font-weight: bold;
-      font-family: 'Nanums_regular';
+      font-family: 'Nanums_regular', sans-serif;
     }
     .division_bar {
       width: 60px;
@@ -130,12 +215,11 @@
       margin: 10px auto 15px;
     }
     p {
-      font-family: 'Nanums_regular';
+      font-family: 'Nanums_regular', sans-serif;
       color: #fdfdfd;
       font-size: 15px;
     }
   }
-
 
   .logo_explain {
     padding: 50px 0;
@@ -146,10 +230,11 @@
       clear: both;
     }
   }
+
   .logo_floor_1 {
     padding: 5px 0 15px;
     span {
-      font-family: 'Nanums_regular';
+      font-family: 'Nanums_regular', sans-serif;
       display: inline-block;
       height: 25px;
       vertical-align: middle;
@@ -166,20 +251,100 @@
   }
 
   .logo_floor_3 {
-    font-family: 'Nanums_regular';
+    font-family: 'Nanums_regular', sans-serif;
     font-size: 16px;
     padding: 4px 0;
     p {
       padding: 3px 0;
     }
   }
-  .organization {
-    height: 400px;
-    background-color: #2c3e50;
+
+  .history {
+    position: relative;
+    background-color: #e5f5ff;
+    padding: 20px 0;
   }
 
-  .map {
-    height: 400px;
-    background-color: #42b983;
+  .center_line {
+    position: absolute;
+    width: 5px;
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 50%;
+    background-color: #259eff;
+  }
+
+  .history_floor {
+    width: 90%;
+    margin: 0 auto;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .contents_wrap {
+    width: 50%;
+    height: 200px;
+    vertical-align: top;
+    float: left;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .dummy {
+    width: 50%;
+    height: 200px;
+    vertical-align: top;
+    float: left;
+  }
+
+  .inner_text {
+    width: 45%;
+    height: 100%;
+    float: left;
+  }
+
+  .inner_image {
+    width: 40%;
+    height: 100%;
+    margin: 0 5%;
+    background-color: #2ba8ff;
+    float: left;
+    border-radius: 5%;
+  }
+
+  .right {
+    float: right;
+    text-align: right;
+  }
+  .left {
+    float: left;
+    text-align: left;
+  }
+
+  .map_wrap {
+    padding: 20px 0;
+  }
+
+  .daum_map {
+    position: relative;
+    width: 90%;
+    height: 550px;
+    margin: auto;
+  }
+
+  .map_info {
+    width: 90%;
+    min-height: 25px;
+    color: #fdfdfd;
+    font-size: 17px;
+    background-color: rgba(25,25,25,0.9);
+    margin: 0 auto;
+    padding: 5px 2px;
   }
 </style>

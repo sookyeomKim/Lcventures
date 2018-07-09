@@ -10,12 +10,14 @@ import Header from './Header'
 import Video from './Video'
 import Footer from './Footer'
 import Navigator from './Navigator'
+import VueDaumMap from '../node_modules/vue-daum-map'
 
 Vue.config.productionTip = false
 Vue.component('app-header', Header)
 Vue.component('app-video', Video)
 Vue.component('app-footer', Footer)
 Vue.component('app-navigator', Navigator)
+Vue.component('vue-daum-map', VueDaumMap)
 
 /* eslint-disable no-new */
 new Vue({
