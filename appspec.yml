@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/Projects/Lcventures
 hooks:
   AfterInstall:
-    - location: deploy.sh
+    - location: deploy-prod.sh
       timeout: 300
       runas: root
     - location: permissions.sh
