@@ -51,5 +51,5 @@ ENV/
 .mypy_cache/
 
 # Staticfiles
-/templates/
-/static/
+templates/
+static/
