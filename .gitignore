@@ -51,4 +51,3 @@ ENV/
 .mypy_cache/
 
 # Staticfiles
-staticfiles/
