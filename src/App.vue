@@ -12,7 +12,6 @@
 
     <!--Footer-->
     <app-footer/>
-    <app-footer/>
 
     <!--Right side Navigation-->
     <app-navigator/>
