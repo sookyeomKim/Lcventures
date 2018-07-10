@@ -15,7 +15,6 @@
 
     <!--Right side Navigation-->
     <app-navigator/>
-    <app-navigator/>
 
   </div>
 </template>
