@@ -28,8 +28,8 @@
     <section class="section_1">
 
       <div class="lc_slogan">
-        <span class="slogan_1">Creative</span>
-        <span class="slogan_2"> + </span>
+        <span class="slogan_1">Creative </span>
+        <span class="slogan_2">+ </span>
         <span class="slogan_3">Performance</span>
         <div class="division_bar"></div>
         <p>엘씨벤처스는 매번 새로운 크리에이티브에 도전하고 있습니다.</p>
@@ -44,18 +44,13 @@
 
       <div class="logo_explain">
         <div class="logo_floor_1">
-          <span>심벌 / 로고타입 최소사용규정</span>
-          <img src="../assets/common/lc_logo.png" alt="Lc ventures logo image." style="filter: invert(1)">
-          <span>10mm</span>
+          <img src="../assets/pages/about/logo_type.jpg" alt="LC Ventures logo type image.">
         </div>
         <div class="logo_floor_2">
-          grid image
-        </div>
-        <div class="logo_floor_3">
           <p>카메라의 초점을 맞추는 형태의 테두리는 엘씨벤처스의 집중력과 팀워크를 나타내며</p>
           <p>테두리의 위, 아래, 양옆으로 트여 있는 부분은 클라이언트와의 원활한 커뮤니케이션을 뜻하기도 합니다.</p>
           <p>또한 지나치게 두껍지도 않고 얇지도 않은 적당한 선의 두께는 엘씨벤처스 직원들의 변함없는 열정과 끈기를 나타냅니다.</p>
-          <p>셀씨베처스 심볼은 마케팅기업다운 디자인적인 세련미와 심플함을 놓치지 않고 표현 했습니다.</p>
+          <p>엘씨벤처스 심볼은 마케팅기업다운 디자인적인 세련미와 심플함을 놓치지 않고 표현 했습니다.</p>
         </div>
       </div>
 
@@ -156,12 +151,18 @@
     name: 'about',
     data: () => ({
       // eslint-disable-next-line
-      appKey: 'c7907ca3d547898728698e99b7c45d01', // Kakao Js app key
-      center: {lat: 37.543607, lng: 127.046351}, // Starting Latitude, Longitude
-      level: 2, // Zoom level
-      mapTypeId: VueDaumMap.MapTypeId.NORMAL, // Map type
-      libraries: [], // Add library
-      map: null // Map object. Access after map loaded.
+      // Kakao Js app key
+      appKey: 'c7907ca3d547898728698e99b7c45d01',
+      // Starting Latitude, Longitude
+      center: {lat: 37.543907, lng: 127.046351},
+      // Zoom level
+      level: 2,
+      // Map type
+      mapTypeId: VueDaumMap.MapTypeId.NORMAL,
+      // Add library
+      libraries: [],
+      // Map object. Access after map loaded.
+      map: null
     }),
     methods: {
       // If map load completed, run load event.
@@ -201,7 +202,7 @@
 
   .lc_slogan {
     padding: 50px 0;
-    background-color: #24a5ff;
+    background-color: #009da5;
     span {
       color: #fdfdfd;
       font-size: 38px;
@@ -232,36 +233,25 @@
   }
 
   .logo_floor_1 {
-    padding: 5px 0 15px;
-    span {
-      font-family: 'Nanums_regular', sans-serif;
-      display: inline-block;
-      height: 25px;
-      vertical-align: middle;
-      padding: 0 5px;
-    }
     img {
-      height: 25px;
+      width: 95%;
+      max-width: 950px;
+      padding: 20px 0;
     }
   }
 
   .logo_floor_2 {
-    height: 300px;
-    background-color: #e5f5ff;
-  }
-
-  .logo_floor_3 {
     font-family: 'Nanums_regular', sans-serif;
     font-size: 16px;
     padding: 4px 0;
     p {
-      padding: 3px 0;
+      padding: 3px 10px;
     }
   }
 
   .history {
     position: relative;
-    background-color: #e5f5ff;
+    background-color: #e5fafb;
     padding: 20px 0;
   }
 
@@ -271,7 +261,7 @@
     height: calc(100% - 40px);
     top: 20px;
     left: 50%;
-    background-color: #259eff;
+    background-color: #009da5;
   }
 
   .history_floor {
@@ -313,7 +303,7 @@
     width: 40%;
     height: 100%;
     margin: 0 5%;
-    background-color: #2ba8ff;
+    background-color: #009da5;
     float: left;
     border-radius: 5%;
   }
