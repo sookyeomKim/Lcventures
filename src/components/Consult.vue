@@ -4,25 +4,31 @@
        @click="$parent.$options.methods.only_close">
 
     <input type="hidden" v-bind:value="where_am_i = 8">
-    <!--
-    <img class="main_image" src="../assets/pages/consult/consult.jpg" alt="page background image">
-    -->
 
     <!-- Main Context on video wrap -->
     <div class="main_title">
-      <h2>항상 고객과 함께합니다.</h2>
+      <h2>항상 고객과 함께 합니다</h2>
+      <span>C</span>
+      <span>O</span>
+      <span>N</span>
+      <span>S</span>
+      <span>U</span>
+      <span>L</span>
+      <span>T</span>
+      <div class="table">
+        <div>우리와 프로젝트를 시작해 보세요</div>
+      </div>
     </div>
 
     <section class="section_1">
-      <input type="text" placeholder="name">
-      <input type="text" placeholder="grade">
-      <input type="text" placeholder="company">
-      <input type="text" placeholder="email">
-      <input type="number" placeholder="number">
-      <input type="text" placeholder="content">
-      <input type="file" placeholder="file">
-      <input type="checkbox" placeholder="agree">
-
+      <input class="name fill" type="text" placeholder="Name">
+      <input class="position fill" type="text" placeholder="Position">
+      <input class="company fill" type="text" placeholder="Organization">
+      <input class="email fill" type="text" placeholder="E-mail">
+      <input class="phone fill" type="number" placeholder="Phone">
+      <input class="describe fill" type="text" placeholder="Describe">
+      <input class="file" type="file" placeholder="file">
+      <input class="check" type="checkbox">
     </section>
 
   </div>
@@ -36,6 +42,19 @@
 
 <style lang="scss" scoped>
 
+  .main_title {
+    .table {
+      position: relative;
+      width: 320px;
+      z-index: 500;
+      padding: 20px 0 0 5%;
+      div {
+        padding: 4px 0;
+        font-size: 17px;
+      }
+    }
+  }
+
   .section_1, .section_2, .section_3 {
     width: 100%;
     padding: 50px 0;
@@ -46,4 +65,16 @@
     z-index: 2000;
   }
 
+  .section_1 {
+    input {
+      &:focus {
+        outline: none;
+      }
+      padding: 5px 5px;
+    }
+    .fill{
+      border: none;
+      border-bottom: 1px solid #ededed;
+    }
+  }
 </style>

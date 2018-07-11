@@ -76,7 +76,10 @@
       }// added
     },
     data: () => ({
-      map: null
+      map: null,
+      assets: [{
+        src: require('../../../assets/common/lc_logo_square.jpg')
+      }]
     }),
     mounted () {
       loadScriptOnce(`//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=${this.appKey}&libraries=${this.libraries.join(',')}`, (err) => {
@@ -148,9 +151,7 @@
             '            <span class="tests">엘씨벤처스</span>' +
             '        </div>' +
             '        <div class="body">' +
-            '            <div class="img">' +
-            '                <img src="http://cfile181.uf.daum.net/image/250649365602043421936D" width="100%" height="100%">' +
-            '            </div>' +
+            '            <div class="img" title="LC Ventures square logo image."></div>' +
             '            <div class="desc">' +
             '                <div class="ellipsis">서울 성동구 뚝섬로 1길 25 한라에코밸리 206호</div>' +
             '                <div class="add_ellipsis">(전화) 070-8855-8390<br/>(지번) 성수동1가 656-36</div> ' +
@@ -268,10 +269,14 @@
     float: left;
     border: 1px solid #c1c1c1;
     margin: 2px;
+    background: url("../../../assets/common/lc_logo_square.jpg") no-repeat center;
+    background-size: 100% 100%;
   }
 
   .overlay_wrap .desc {
     white-space: normal;
+    font-family: 'Nanums_bold', sans-serif;
+    font-weight: bold;
   }
 
   .overlay_wrap .ellipsis {

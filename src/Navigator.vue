@@ -89,11 +89,11 @@
         display: block;
         padding: 4px 8px;
         color: #aeaeae;
-        &:hover {
+        &:hover, &:active {
           color: #fdfdfd;
         }
       }/*List route links*/
-      &:hover {
+      &:hover, &:active {
         cursor: pointer;
         background-color: #313131;
       }
@@ -130,10 +130,10 @@
     float: right;
     margin: -15px 15px 0 0;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
-    &:hover {
+    &:hover, &:active {
       transform: rotate(270deg);
     }
-    &:hover:before {
+    &:hover:before, &:active {
       color: #efefef;
     }
     .menu_close_image {

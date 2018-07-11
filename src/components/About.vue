@@ -32,6 +32,7 @@
         <span class="slogan_2">+ </span>
         <span class="slogan_3">Performance</span>
         <div class="division_bar"></div>
+        <p>[[변경예정.]]</p>
         <p>엘씨벤처스는 매번 새로운 크리에이티브에 도전하고 있습니다.</p>
         <p>이를 토대로 엘씨벤처스의 브랜드 가치를 높여 국내 경쟁력을 확보하겠습니다.</p>
       </div>
@@ -66,7 +67,13 @@
         <div class="history_floor">
           <div class="contents_wrap">
             <div class="inner_image right"></div>
-            <div class="inner_text right">text</div>
+            <div class="inner_text right">
+              <ul>
+                <li>KAKAO 프리미엄 공식대행사 선정</li>
+                <li>Google C-Level 파트너 선정</li>
+                <li>SK Planet 디자인외주사 선정</li>
+              </ul>
+            </div>
           </div>
           <div class="dummy"></div>
         </div>
@@ -75,14 +82,32 @@
           <div class="dummy"></div>
           <div class="contents_wrap">
             <div class="inner_image left"></div>
-            <div class="inner_text left">text</div>
+            <div class="inner_text left">
+              <div>
+                <p>지원본부 확장</p>
+                <p>영상제작 Team</p>
+                <ul>
+                  <li>Facebook Agency Directory 광고대행사 선정</li>
+                  <li>SK communications 공식대행사 선정</li>
+                  <li>SK Planet 공식대행사 선정</li>
+                  <li>Yellow mobile 공식대행사 선정</li>
+                  <li>Taboola 공식대행사 선정</li>
+                </ul>
+                <ul>
+                  <li>KAKAO 광고 성과측정 프로그램</li>
+                  <li>업무자동화 프로그램</li>
+                  <li>DB추출 프로그램</li>
+                  <li>인스타그램 자동 팔로워 증가 프로그램</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="history_floor">
           <div class="contents_wrap">
             <div class="inner_image right"></div>
-            <div class="inner_text right">text</div>
+            <div class="inner_text right">Image will be better</div>
           </div>
           <div class="dummy"></div>
         </div>
@@ -91,14 +116,14 @@
           <div class="dummy"></div>
           <div class="contents_wrap">
             <div class="inner_image left"></div>
-            <div class="inner_text left">text</div>
+            <div class="inner_text left">Image will be better</div>
           </div>
         </div>
 
         <div class="history_floor">
           <div class="contents_wrap">
             <div class="inner_image right"></div>
-            <div class="inner_text right">text</div>
+            <div class="inner_text right">Image will be better</div>
           </div>
           <div class="dummy"></div>
         </div>
@@ -150,6 +175,7 @@
   export default {
     name: 'about',
     data: () => ({
+      windowWidth: window.innerWidth,
       // eslint-disable-next-line
       // Kakao Js app key
       appKey: 'c7907ca3d547898728698e99b7c45d01',
@@ -169,6 +195,15 @@
       onLoad (map) {
         this.map = map
       }
+    },
+    mounted () {
+      /* Calculate browser width for handle video section */
+      let that = this
+      this.$nextTick(function () {
+        window.addEventListener('resize', function (e) {
+          that.windowWidth = window.innerWidth
+        })
+      })
     }
   }
 </script>
@@ -257,11 +292,12 @@
 
   .center_line {
     position: absolute;
-    width: 5px;
+    width: 4px;
     height: calc(100% - 40px);
     top: 20px;
     left: 50%;
     background-color: #009da5;
+    border-radius: 5px;
   }
 
   .history_floor {
@@ -276,7 +312,6 @@
 
   .contents_wrap {
     width: 50%;
-    height: 200px;
     vertical-align: top;
     float: left;
     &:after {
@@ -294,18 +329,18 @@
   }
 
   .inner_text {
-    width: 45%;
     height: 100%;
     float: left;
+    margin: 10px 5%;
   }
 
   .inner_image {
-    width: 40%;
-    height: 100%;
+    width: 180px;
+    height: 180px;
     margin: 0 5%;
     background-color: #009da5;
     float: left;
-    border-radius: 5%;
+    border-radius: 50%;
   }
 
   .right {
@@ -323,13 +358,13 @@
 
   .daum_map {
     position: relative;
-    width: 90%;
-    height: 550px;
+    width: 92%;
+    height: 480px;
     margin: auto;
   }
 
   .map_info {
-    width: 90%;
+    width: 92%;
     min-height: 25px;
     color: #fdfdfd;
     font-size: 17px;

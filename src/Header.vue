@@ -110,7 +110,7 @@
     color: #fdfdfd;
     border-radius: 4px;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
-    &:hover {
+    &:hover, &:active {
       background-color: rgba(25, 25, 25, 0.6);
     }
     img {
@@ -138,7 +138,7 @@
     margin-right: 15px;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
     font-family: Impact, sans-serif;
-    &:hover {
+    &:hover, &:active {
       color: #aeaeae;
     }
   }
@@ -162,7 +162,7 @@
     //margin-left: calc(100% - 100px);
     z-index: 5000;
     float: right;
-    &:hover:before {
+    &:hover:before, &:active {
       color: #aeaeae;
     }
   }

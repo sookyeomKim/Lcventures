@@ -3,53 +3,23 @@
   <main class="main_role" id="main_role"
         :style="this.$parent.$data.mix_data.slide_mover"
         @click="$parent.$options.methods.only_close">
-<!--
-    <div class="video_wrap" id="video_wrap">
-      <div class="video_basket" id="video_basket">
--->
-        <!-- Youtube -->
-<!--
-        <iframe v-if="windowWidth > 835" class="video" id="video" type="text/html"
-                src="https://www.youtube.com/embed/K0lL1HysGMc?&version=3&autoplay=1&loop=1&playlist=K0lL1HysGMc&showinfo=0&fs=0&disablekb=1&vq=auto&controls=0&rel=0&end=75"
-                frameborder="0" volume="0" allowfullscreen webkitallowfullscreen mozallowfullscreen>
-        </iframe>
--->
 
-        <!-- Vimeo -->
-<!--
-        <iframe v-if="windowWidth > 835" class="video" id="video"
-                src="https://player.vimeo.com/video/221257502?autoplay=1&loop=1&color=ffffff&background=1&title=0&byline=0&portrait=0&controls=0"
-                width="100%" height="100%" frameborder="0" volume="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-        </iframe>
--->
-        <!-- Cover Image when replaced instead video -->
-<!--
-        <img v-else class="video_cover" src="../assets/pages/home/unsplash2.jpg" alt="Main Cover Image" />
-
-      </div>
-    </div>
--->
     <!-- Main Context on video wrap -->
     <div class="main_title">
       <h2>사람・문화・공간</h2>
-      <!-- <h3>우리는 개방적입니다</h3> -->
       <div class="division_bar"></div>
       <p>개성 넘치는 다양한 구성원들과, 복층으로 이루어진 색다를 회사 공간에서</p>
       <p>서로의 의견을 자유롭게 이야기하고, 각 부서간 원활하게 소통합니다.</p>
       <p>우리는 퍼포먼스와 동시에 사람을 가장 중요하게 생각합니다.</p>
-      <!--
-      <div class="guide_to_scroll">
-        <p class="guide_text">엘씨벤처스 더 보기</p>
-        <img class="down_img" src="../assets/pages/home/home_scroll.png" alt="Scroll down image">
-      </div>
-      -->
     </div>
 
     <section class="section_1"><!--make ul list-->
 
+      <!--
       <div class="culture">
         <img src="../assets/pages/home/home_culture.png" alt="Culture">
       </div>
+      -->
 
       <div class="culture_wrap">
         <div class="culture_img_wrap">
@@ -77,19 +47,18 @@
         </div>
         <div class="culture_text">
           <div class="inner_title">
-            <h4>RESPECT</h4>
-            <p>우리는 존중합니다</p>
+            <h4>OPEN MIND</h4>
+            <p>우리는 개방적입니다</p>
           </div>
           <div class="division_bar_small"></div>
           <div class="inner_content">
-            <p>나이와 직급에 상관없이</p>
-            <p>모두에게 존댓말과 높임말을 사용합니다.</p>
-            <p>동등한 위치에서 자신의 생각을 말하지만,</p>
-            <p>스스로가 내린 결정의 책임감을 가지고 일합니다.</p>
+            <p>복층으로 이루어진 색다른 공간에서</p>
+            <p>우리는 서로의 의견을 자유롭게 이야기하고,</p>
+            <p>각 부서간 원활하게 소통하며 일합니다.</p>
           </div>
         </div>
         <div class="side_text">
-          <p>Have sense of responsibility</p>
+          <p>Work as open mind</p>
         </div>
       </div>
     </section>
@@ -122,20 +91,19 @@
         </div>
         <div class="culture_text">
           <div class="inner_title">
-            <h4>ENJOY</h4>
-            <p>우리는 즐겁습니다</p>
+            <h4>RESPECT</h4>
+            <p>우리는 존중합니다</p>
           </div>
           <div class="division_bar_small"></div>
           <div class="inner_content">
-            <p>날이 좋은 날에는,</p>
-            <p>직원들과 함께 즉흥적으로 소풍을 떠납니다.</p>
-            <p>벚꽃이 만개할 때는, 다같이 벚꽅놀이를 갑니다.</p>
-            <p>연말에는 송년회를 열어</p>
-            <p>한 해의 격려와 응원을 보내줍니다.</p>
+            <p>나이와 직급에 상관없이</p>
+            <p>모두에게 존댓말과 높임말을 사용합니다.</p>
+            <p>동등한 위치에서 자신의 생각을 말하지만,</p>
+            <p>스스로가 내린 결정의 책임감을 가지고 일합니다.</p>
           </div>
         </div>
         <div class="side_text">
-          <p>Give encouragement to each other</p>
+          <p>Have sense of responsibility</p>
         </div>
       </div>
 
@@ -170,21 +138,20 @@
         </div>
         <div class="culture_text">
           <div class="inner_title">
-            <h4>FREEDOM</h4>
-            <p>우리는 자유롭습니다</p>
+            <h4>ENJOY</h4>
+            <p>우리는 즐겁습니다</p>
           </div>
           <div class="division_bar_small"></div>
           <div class="inner_content">
-            <p>공식 업무 시간은 오전 9시30분으로</p>
-            <p>여유롭게 아침을 시작합니다.</p>
-            <p>업무 중 피곤함이 몰려올 때는,</p>
-            <p>잠깐의 티타임으로 에너지를 얻습니다.</p>
-            <p>우리는 매년 하계 휴가를 통해</p>
-            <p>재충전의 시간을 보냅니다.</p>
+            <p>날이 좋은 날에는,</p>
+            <p>직원들과 함께 즉흥적으로 소풍을 떠납니다.</p>
+            <p>벚꽃이 만개할 때는, 다같이 벚꽅놀이를 갑니다.</p>
+            <p>연말에는 송년회를 열어</p>
+            <p>한 해의 격려와 응원을 보내줍니다.</p>
           </div>
         </div>
         <div class="side_text">
-          <p>Have time of recharge</p>
+          <p>Give encouragement to each other</p>
         </div>
       </div>
 
@@ -198,7 +165,7 @@
           <div class="culture_img">
             <ul>
               <transition-group :name="transition_name">
-                <li class="slide_4" v-for="(image, index) in images_2" :key="index" v-if="slide_4_flag == (index+1)">
+                <li class="slide_4" v-for="(image, index) in images_4" :key="index" v-if="slide_4_flag == (index+1)">
                   <img :src="image.src" :alt="image.title">
                 </li>
               </transition-group>
@@ -219,23 +186,27 @@
         </div>
         <div class="culture_text">
           <div class="inner_title">
-            <h4>OPEN MIND</h4>
-            <p>우리는 개방적입니다</p>
+            <h4>FREEDOM</h4>
+            <p>우리는 자유롭습니다</p>
           </div>
           <div class="division_bar_small"></div>
           <div class="inner_content">
-            <p>복층으로 이루어진 색다른 공간에서</p>
-            <p>우리는 서로의 의견을 자유롭게 이야기하고,</p>
-            <p>각 부서간 원활하게 소통하며 일합니다.</p>
+            <p>공식 업무 시간은 오전 9시30분으로</p>
+            <p>여유롭게 아침을 시작합니다.</p>
+            <p>업무 중 피곤함이 몰려올 때는,</p>
+            <p>잠깐의 티타임으로 에너지를 얻습니다.</p>
+            <p>우리는 매년 하계 휴가를 통해</p>
+            <p>재충전의 시간을 보냅니다.</p>
           </div>
         </div>
         <div class="side_text">
           <p>Have time of recharge</p>
         </div>
+
       </div>
 
     </section>
-    <!--section 2-->
+    <!--section 4-->
 
     <!-- Do not delete it. it exist for count image lists -->
     <input type="hidden" v-bind:value="img_counter(images_1.length, images_2.length, images_3.length, images_4.length)">
@@ -253,64 +224,68 @@
         /* Slider 1 Images. title will be alt */
         images_1: [
           {
-            title: 'Respect image 1',
-            src: require('../assets/pages/home/image_1/1.png')
+            title: 'Temporary Mind image 1',
+            src: require('../assets/pages/home/image_2/3.png')
           },
           {
-            title: 'Respect image 2',
-            src: require('../assets/pages/home/image_1/2.png')
-          },
-          {
-            title: 'Respect image 3',
-            src: require('../assets/pages/home/image_1/3.png')
-          },
-          {
-            title: 'Respect image 4',
-            src: require('../assets/pages/home/image_1/4.png')
+            title: 'Temporary Mind image 2',
+            src: require('../assets/pages/home/image_2/3.png')
           }
         ],
         /* Slider 2 Images. title will be alt */
         images_2: [
           {
-            title: 'Enjoy image 1',
+            title: 'Respect image 1',
             src: require('../assets/pages/home/image_2/1.png')
           },
           {
-            title: 'Enjoy image 2',
+            title: 'Respect image 2',
             src: require('../assets/pages/home/image_2/2.png')
           },
           {
-            title: 'Enjoy image 3',
+            title: 'Respect image 3',
             src: require('../assets/pages/home/image_2/3.png')
           },
           {
-            title: 'Enjoy image 4',
+            title: 'Respect image 4',
             src: require('../assets/pages/home/image_2/4.png')
           }
         ],
         /* Slider 3 Images. title will be alt */
         images_3: [
           {
-            title: 'Freedom image 1',
+            title: 'Enjoy image 1',
             src: require('../assets/pages/home/image_3/1.png')
           },
           {
-            title: 'Freedom image 2',
+            title: 'Enjoy image 2',
             src: require('../assets/pages/home/image_3/2.png')
           },
           {
-            title: 'Freedom image 3',
+            title: 'Enjoy image 3',
             src: require('../assets/pages/home/image_3/3.png')
           },
           {
-            title: 'Freedom image 4',
+            title: 'Enjoy image 4',
             src: require('../assets/pages/home/image_3/4.png')
           }
         ],
         images_4: [
           {
-            title: 'Temporary image 1',
-            src: require('../assets/pages/home/image_2/2.png')
+            title: 'Freedom image 1',
+            src: require('../assets/pages/home/image_4/1.png')
+          },
+          {
+            title: 'Freedom image 2',
+            src: require('../assets/pages/home/image_4/2.png')
+          },
+          {
+            title: 'Freedom image 3',
+            src: require('../assets/pages/home/image_4/3.png')
+          },
+          {
+            title: 'Freedom image 4',
+            src: require('../assets/pages/home/image_4/4.png')
           }
         ],
         /* Image count flags */
@@ -470,7 +445,8 @@
       overflow: hidden;
       float: left;
       z-index: 400;
-      border: 8px solid #d60c47;
+      //border: 8px solid #d60c47;
+      border: 8px solid #fe7a11;
       background-color: #fefefe;
       ul {
         width: 100%;
@@ -550,15 +526,15 @@
           border: 3px solid #ffffff;
           border-radius: 100%;
           opacity: 0.7;
+          padding: 0;
           img {
             width: 100%;
             height: 100%;
-            transform: scale(0.8);
           }
           &:focus {
             outline: none;
           }
-          &:hover {
+          &:hover, &:active {
             opacity: 1;
           }
           &:active {
@@ -596,8 +572,9 @@
       width: 50%;
       padding-bottom: 50%;
       border-radius: 120%;
+      //135deg, #002778 25%, #ffffff 25%, #ffffff 50%, #002778 50%, #002778 75%, #ffffff 75%, #ffffff 100%
       background-image: linear-gradient(
-          135deg, #002778 25%, #ffffff 25%, #ffffff 50%, #002778 50%, #002778 75%, #ffffff 75%, #ffffff 100%
+          135deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
       );
       background-size: 20px 20px;
       right: -48%;
@@ -616,7 +593,8 @@
         font-size: 55px;
         font-weight: bold;
         margin: 38px 0 3px;
-        color: #d60c47;
+        //color: #d60c47;
+        color: #fe7a11;
       }
       p {
         font-family: 'Nanums_regular', sans-serif;
@@ -664,11 +642,12 @@
         float: right;
         .culture_img {
           float: right;
-          border: 8px solid #002778;
+          border: 8px solid #fe7a11;
         }
         .img_border {
+          //45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
           background-image: linear-gradient(
-              45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
+              45deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
           );
           right: 0;
         }
@@ -677,7 +656,8 @@
         float: right;
         .inner_title {
           h4 {
-            color: #002778;
+            //color: #002778;
+            color: #fe7a11;
           }
         }
       }
@@ -704,11 +684,13 @@
         float: right;
         .culture_img {
           float: right;
-          border: 8px solid #002778;
+          //border: 8px solid #002778;
+          border: 8px solid #fe7a11;
         }
         .img_border {
+          //45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
           background-image: linear-gradient(
-              45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
+              45deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
           );
           right: 0;
         }
@@ -717,7 +699,8 @@
         float: right;
         .inner_title {
           h4 {
-            color: #002778;
+            //color: #002778;
+            color: #fe7a11;
           }
         }
       }

@@ -31,8 +31,14 @@
     </div>
 
     <div class="guide_button">
-      <router-link class="gtn" to="/consult">ㅁ 문의하기</router-link>
-      <button class="gtn"><span>ㅁ</span>회사소개서 다운받기</button>
+      <router-link class="gtn" to="/consult">
+        <img src="./assets/common/talk_white.png" alt="Consult button image.">
+        <p>문의하기</p>
+      </router-link>
+      <a class="gtn" href="./assets/common/files/aia_ppt.pptx" download>
+        <img src="./assets/common/down_white.png" alt="Introduce file download button image.">
+        <p>회사소개서 다운받기</p>
+      </a>
     </div>
 
   </div>
@@ -131,18 +137,18 @@
     position: absolute;
     display: block;
     width: 100%;
-    top: calc(100vh - 70px);
+    top: calc(100vh - 60px);
     text-align: center;
     z-index: 8000;
   }
   .guide_text {
     position: absolute;
-    width: 100%;
-    /*top: 75px;*/
-    /*left: 80px;*/
-    padding: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 5px !important;
     font-family: 'Nanums_regular', sans-serif;
     font-size: 16px;
+    line-height: 20px;
     color: #fdfdfd;
   }
   .down_img {
@@ -154,7 +160,6 @@
     filter: invert(1);
     animation: down_there 1500ms infinite ease-in-out;
   }
-
 
   .guide_button {
     position: absolute;
@@ -175,10 +180,29 @@
       cursor: pointer;
       z-index: 9999;
       padding: 2px 5px;
-      &:hover {
+      vertical-align: top;
+      &:hover, &:active {
         background-color: rgba(25, 25, 25, 0.7);
         color: rgba(200,200,200, 0.8);
         transition: all 350ms cubic-bezier(.83,.01,.46,.86);
+      }
+      img {
+        float: left;
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
+        margin: 0 5px 0 0;
+        vertical-align: top;
+      }
+      p {
+        float: left;
+        height: 35px;
+        line-height: 31px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
       }
     }
   }
