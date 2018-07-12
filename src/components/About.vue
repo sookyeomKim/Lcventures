@@ -28,13 +28,27 @@
     <section class="section_1">
 
       <div class="lc_slogan">
+
+        <!--
         <span class="slogan_1">Creative </span>
         <span class="slogan_2">+ </span>
         <span class="slogan_3">Performance</span>
+        -->
+
+        <span>급변하는 디지털시대의 혼돈 속에서 우리는 어떤 모습일까요?</span>
+
         <div class="division_bar"></div>
-        <p>[[변경예정.]]</p>
+
+        <!--
         <p>엘씨벤처스는 매번 새로운 크리에이티브에 도전하고 있습니다.</p>
         <p>이를 토대로 엘씨벤처스의 브랜드 가치를 높여 국내 경쟁력을 확보하겠습니다.</p>
+        -->
+
+        <p>우리는 디지털 미디어의 변화에 빠르게 적응하고, 대응하고, 리드합니다.</p>
+        <p>변화를 두려워 하지 않는 자세, 능동적이고 창의적인 행동들이 모여 엘씨벤처스를 이룹니다.</p>
+        <p>삶을 윤택하게 만드는 기술,</p>
+        <p>함께 만들어갑시다.</p>
+
       </div>
       <div class="division_bar"></div>
 

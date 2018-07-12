@@ -16,31 +16,31 @@
     <section class="section_1">
       <div class="people_area">
         <div class="people">
-          <div class="person" style=" height: 250px; background-color: #5b80b2"></div>
+          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
-          <div class="person" style=" height: 200px; background-color: #2c3e50"></div>
+          <img class="person" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
         </div>
         <div class="people">
-          <div class="person" style=" height: 300px; background-color: #447e9b"></div>
+          <img class="person" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
         </div>
         <div class="people">
-          <div class="person" style=" height: 350px; background-color: #79aec8"></div>
+          <img class="person" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
         </div>
         <div class="people">
-          <div class="person" style=" height: 350px; background-color: #7f7f7f"></div>
+          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
-          <div class="person" style=" height: 100px; background-color: #006666"></div>
+          <img class="person" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
         </div>
         <div class="people">
-          <div class="person" style=" height: 150px; background-color: #417690"></div>
+          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
-          <div class="person" style=" height: 400px; background-color: darkslategray"></div>
+          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
-          <div class="person" style=" height: 200px; background-color: royalblue"></div>
+          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
 
       </div>
@@ -60,12 +60,34 @@
 </script>
 
 <style lang="scss" scoped>
+
+  /* Section Part */
+  .section_1, .section_2, .section_3, .section_4 {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+    color: #515151;
+    font-family: Impact, sans-serif;
+    z-index: 2000;
+    min-height: 700px;
+  }
+
   .people_area {
-    padding: 5px 5px;
-    column-count: 4;
+    padding: 0 2%;
+    display: block;
+    column-count: 5;
     column-gap: 0;
     background-color: #ffffff;
+    text-align: center;
+    overflow: visible;
+    &:after {
+      content:'';
+      display: block;
+      clear: both;
+    }
   }
+
   @media (max-width: 480px) {
     .people_area {
       column-count: 1;
@@ -81,15 +103,30 @@
       column-count: 3;
     }
   }
-
+  @media (min-width: 1199px) and (max-width: 1600px) {
+    .people_area {
+      column-count: 4;
+    }
+  }
 
   .people {
     break-inside: avoid;
+    width: 100%;
     padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 360px;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    text-align: center;
+    &:hover, &:active {
+      transform: scale(1.02);
+    }
   }
 
   .person {
-    padding: 10px;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
   }
 </style>
