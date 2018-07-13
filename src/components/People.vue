@@ -42,10 +42,7 @@
         <div class="people">
           <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
-
       </div>
-
-
     </section>
 
 
@@ -129,4 +126,5 @@
     width: 100%;
     height: 100%;
   }
+
 </style>

@@ -20,46 +20,34 @@
     </section>
 
     <section class="section_2">
-      <div class="projects">
-        <ul>
-
-          <li>
-            <div class="career_wrap">
-              <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
-              <div class="career_inform">
-                <p>Green box</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="career_wrap">
-              <img class="career_image" src="../assets/pages/projects/temporary-1.png" alt="Our project - temp 1">
-              <div class="career_inform">
-                <p>White box</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="career_wrap">
-              <img class="career_image" src="../assets/pages/projects/temporary-2.png" alt="Our project - temp 1">
-              <div class="career_inform">
-                <p>Blue box</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="career_wrap">
-              <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
-              <div class="career_inform">
-                <p>Green box</p>
-              </div>
-            </div>
-          </li>
-
-        </ul>
+      <div class="projects_area">
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/projects/temporary-2.png" alt="temp man">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/projects/temporary-0.png" alt="temp placeholder.">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/projects/temporary-1.png" alt="temp placeholder.">
+        </div>
+        <div class="projects">
+          <img class="project" src="../assets/pages/people/temp_handsome.jpg" alt="temp placeholder.">
+        </div>
       </div>
     </section>
   </div>
@@ -74,8 +62,8 @@
 <style lang="scss" scoped>
 
   .section_1 {
-    background-color: #fff68f;
-    padding: 20px 30px;
+    background-color: #ffffff;
+    padding: 30px 30px 20px;
     .section_1_title {
       margin: 0;
       color: #313131;
@@ -88,33 +76,61 @@
     background-size: cover;
   }
 
+  .projects_area {
+    padding: 0 2%;
+    display: block;
+    column-count: 5;
+    column-gap: 0;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: visible;
+    &:after {
+      content:'';
+      display: block;
+      clear: both;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .projects_area {
+      column-count: 1;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 835px) {
+    .projects_area {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 836px) and (max-width: 1200px) {
+    .projects_area {
+      column-count: 3;
+    }
+  }
+  @media (min-width: 1199px) and (max-width: 1600px) {
+    .projects_area {
+      column-count: 4;
+    }
+  }
+
   .projects {
-    ul {
-      position: relative;
-      margin: 0 auto;
-      background-color: #fff68f;
-      li {
-        width: 100%;
-        overflow: hidden;
-        .career_wrap {
-          max-height: 300px;
-          .career_image {
-            width: 100%;
-            max-height: 300px;
-            float: left;
-            object-fit: cover;
-          }
-          .career_inform {
-            position: relative;
-            padding: 15px;
-            top: calc(50% + 15px);
-            left: 50%;
-            transform: translate(-50% -50%);
-            color: #1ff68f;
-          }
-        }
-      }/*projects ul li*/
-    }/*projects ul*/
-  }/*projects*/
+    break-inside: avoid;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 360px;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    text-align: center;
+    &:hover, &:active {
+      transform: scale(1.02);
+    }
+  }
+
+  .project {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
 
 </style>
