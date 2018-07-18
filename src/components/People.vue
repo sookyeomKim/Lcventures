@@ -14,8 +14,8 @@
     </div>
 
     <section class="section_1">
-      <div class="people_area">
-        <div class="people">
+      <div class="people_area" v-lazy-container="{ selector: 'img' }">
+        <!--<div class="people">
           <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
@@ -40,7 +40,11 @@
           <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
         </div>
         <div class="people">
-          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
+          &lt;!&ndash;src="../assets/pages/people/vertical_placeholder.png"&ndash;&gt;
+          <img class="person" :src="dt_src" :data-src="dt_src" alt="temp placeholder.">
+        </div>-->
+        <div class="people" v-for="datas in dt_src">
+          <img class="person" :data-src="datas" alt="">
         </div>
       </div>
     </section>
@@ -52,7 +56,33 @@
 
 <script>
   export default {
-    name: 'people'
+    name: 'people',
+    data: () => ({
+      dt_src: [
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/temp_handsome.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_beauty.jpg'),
+        require('../assets/pages/people/vertical_placeholder.png'),
+        require('../assets/pages/people/temp_beauty.jpg')
+      ]
+    })
   }
 </script>
 
