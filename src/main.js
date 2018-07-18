@@ -11,6 +11,7 @@ import Video from './Video'
 import Footer from './Footer'
 import Navigator from './Navigator'
 import DaumMap from './plugins/daum-map'
+import VueLazyload from 'vue-lazyload'
 
 Vue.config.productionTip = false
 Vue.component('app-header', Header)
@@ -20,6 +21,12 @@ Vue.component('app-navigator', Navigator)
 Vue.component('vue-daum-map', DaumMap)
 
 Vue.use(DaumMap)
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: require('./assets/common/close_btn.png'),
+  loading: require('./assets/common/lc_logo_square.jpg'),
+  attempt: 1
+})
 
 /* eslint-disable no-new */
 new Vue({
