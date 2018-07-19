@@ -15,41 +15,12 @@
 
     <section class="section_1">
       <div class="people_area" v-lazy-container="{ selector: 'img' }">
-        <!--<div class="people">
-          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="people">
-          <img class="person" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="people">
-          &lt;!&ndash;src="../assets/pages/people/vertical_placeholder.png"&ndash;&gt;
-          <img class="person" :src="dt_src" :data-src="dt_src" alt="temp placeholder.">
-        </div>-->
-        <div class="people" v-for="datas in dt_src">
-          <img class="person" :data-src="datas" alt="">
+        <div class="people" v-for="source in image_sources">
+          <img class="person" :data-src="source.src" :alt="source.title">
+          <span>{{ source.title }}</span>
         </div>
       </div>
     </section>
-
-
 
   </div>
 </template>
@@ -58,29 +29,87 @@
   export default {
     name: 'people',
     data: () => ({
-      dt_src: [
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/temp_handsome.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_beauty.jpg'),
-        require('../assets/pages/people/vertical_placeholder.png'),
-        require('../assets/pages/people/temp_beauty.jpg')
+      image_sources: [
+        {
+          title: 'temporary image1',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image2',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image3',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image4',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image5',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'temporary image6',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image7',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image8',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image9',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image10',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        }
       ]
     })
   }
@@ -101,51 +130,27 @@
   }
 
   .people_area {
-    padding: 0 2%;
-    display: block;
-    column-count: 5;
-    column-gap: 0;
-    background-color: #ffffff;
+    display: flex;
     text-align: center;
-    overflow: visible;
-    &:after {
-      content:'';
-      display: block;
-      clear: both;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .people_area {
-      column-count: 1;
-    }
-  }
-  @media (min-width: 481px) and (max-width: 835px) {
-    .people_area {
-      column-count: 2;
-    }
-  }
-  @media (min-width: 836px) and (max-width: 1200px) {
-    .people_area {
-      column-count: 3;
-    }
-  }
-  @media (min-width: 1199px) and (max-width: 1600px) {
-    .people_area {
-      column-count: 4;
-    }
+    padding: 0 2%;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #ffffff;
   }
 
   .people {
-    break-inside: avoid;
     width: 100%;
-    padding: 5px;
+    padding: 0.5em;
     margin: auto;
     border-radius: 10px;
-    max-width: 360px;
+    max-width: 300px;
     overflow: hidden;
     transition: all 200ms ease-out;
     text-align: center;
+    flex: 1 1 280px;
     &:hover, &:active {
       transform: scale(1.02);
     }

@@ -20,42 +20,104 @@
     </section>
 
     <section class="section_2">
-      <div class="projects_area">
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/projects/temporary-2.png" alt="temp man">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/temp_handsome.jpg" alt="temp man">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/projects/temporary-0.png" alt="temp placeholder.">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/temp_beauty.jpg" alt="temp woman">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/vertical_placeholder.png" alt="temp placeholder.">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/projects/temporary-1.png" alt="temp placeholder.">
-        </div>
-        <div class="projects">
-          <img class="project" src="../assets/pages/people/temp_handsome.jpg" alt="temp placeholder.">
+      <div class="projects_area" v-lazy-container="{ selector: 'img' }">
+        <div class="projects" v-for="source in image_sources">
+          <img class="project" :data-src="source.src" :alt="source.title">
+          <span>{{ source.title }}</span>
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
 <script>
   export default {
-    name: 'projects'
+    name: 'projects',
+    data: () => ({
+      image_sources: [
+        {
+          title: 'temporary image1',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image2',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image3',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image4',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image5',
+          src: require('../assets/pages/projects/temporary-0.png')
+        },
+        {
+          title: 'temporary image6',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image7',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image8',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image9',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image10',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/projects/temporary-1.png')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/projects/temporary-2.png')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'beauty image',
+          src: require('../assets/pages/people/temp_beauty.jpg')
+        },
+        {
+          title: 'handsome image',
+          src: require('../assets/pages/people/temp_handsome.jpg')
+        },
+        {
+          title: 'temporary image',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        }
+      ]
+    })
   }
 </script>
 
@@ -77,51 +139,27 @@
   }
 
   .projects_area {
-    padding: 0 2%;
-    display: block;
-    column-count: 5;
-    column-gap: 0;
-    background-color: #ffffff;
+    display: flex;
     text-align: center;
-    overflow: visible;
-    &:after {
-      content:'';
-      display: block;
-      clear: both;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .projects_area {
-      column-count: 1;
-    }
-  }
-  @media (min-width: 481px) and (max-width: 835px) {
-    .projects_area {
-      column-count: 2;
-    }
-  }
-  @media (min-width: 836px) and (max-width: 1200px) {
-    .projects_area {
-      column-count: 3;
-    }
-  }
-  @media (min-width: 1199px) and (max-width: 1600px) {
-    .projects_area {
-      column-count: 4;
-    }
+    padding: 0 2%;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #ffffff;
   }
 
   .projects {
-    break-inside: avoid;
     width: 100%;
-    padding: 5px;
+    padding: 0.5em;
     margin: auto;
     border-radius: 10px;
-    max-width: 360px;
+    max-width: 300px;
     overflow: hidden;
     transition: all 200ms ease-out;
     text-align: center;
+    flex: 1 1 280px;
     &:hover, &:active {
       transform: scale(1.02);
     }
