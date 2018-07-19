@@ -23,7 +23,7 @@ Vue.component('vue-daum-map', DaumMap)
 Vue.use(DaumMap)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: require('./assets/common/close_btn.png'),
+  error: require('./assets/common/temp.png'),
   loading: require('./assets/common/lc_logo_square.jpg'),
   attempt: 1
 })
