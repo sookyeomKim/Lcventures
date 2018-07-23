@@ -145,7 +145,7 @@
           <div class="inner_content">
             <p>날이 좋은 날에는,</p>
             <p>직원들과 함께 즉흥적으로 소풍을 떠납니다.</p>
-            <p>벚꽃이 만개할 때는, 다같이 벚꽅놀이를 갑니다.</p>
+            <p>벚꽃이 만개할 때는, 다같이 벚꽃놀이를 갑니다.</p>
             <p>연말에는 송년회를 열어</p>
             <p>한 해의 격려와 응원을 보내줍니다.</p>
           </div>
@@ -217,6 +217,15 @@
 <script>
   export default {
     name: 'home',
+    mounted () {
+      /* Calculate browser width for handle video section */
+      let that = this
+      this.$nextTick(function () {
+        window.addEventListener('resize', function (e) {
+          that.windowWidth = window.innerWidth
+        })
+      })
+    },
     data: function () {
       return {
         windowWidth: window.innerWidth,
@@ -301,15 +310,6 @@
         slide_4_max: 0,
         slide_4_flag: 1
       }
-    },
-    mounted () {
-      /* Calculate browser width for handle video section */
-      let that = this
-      this.$nextTick(function () {
-        window.addEventListener('resize', function (e) {
-          that.windowWidth = window.innerWidth
-        })
-      })
     },
     methods: {
       /* Set Max flags as belongs to image lists */

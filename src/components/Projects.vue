@@ -20,12 +20,16 @@
     </section>
 
     <section class="section_2">
-      <div class="projects_area" v-lazy-container="{ selector: 'img' }">
-        <div class="projects" v-for="source in image_sources">
-          <img class="project" :data-src="source.src" :alt="source.title">
-          <span>{{ source.title }}</span>
-        </div>
-      </div>
+
+        <ul class="projects_area" v-lazy-container="{ selector: 'img' }">
+          <li class="projects" v-for="source in image_sources">
+            <div class="project_wrap">
+              <img class="project" :data-src="source.src" :alt="source.title">
+              <span>{{ source.title }}</span>
+            </div>
+          </li>
+        </ul>
+
     </section>
 
   </div>
@@ -139,36 +143,41 @@
   }
 
   .projects_area {
-    display: flex;
     text-align: center;
     padding: 0 2%;
     border-radius: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     background-color: #ffffff;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
   .projects {
+    display: inline-block;
     width: 100%;
     padding: 0.5em;
-    margin: auto;
     border-radius: 10px;
     max-width: 300px;
     overflow: hidden;
     transition: all 200ms ease-out;
     text-align: center;
-    flex: 1 1 280px;
+    margin: auto;
+    vertical-align: center;
     &:hover, &:active {
       transform: scale(1.02);
     }
   }
 
+  .project_wrap {
+    height: 480px;
+  }
+
   .project {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 
 </style>

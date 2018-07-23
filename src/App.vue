@@ -683,6 +683,5 @@
     } /* For Small size viewer */
   }/*=*/
 
-
 </style>
 

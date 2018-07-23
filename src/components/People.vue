@@ -14,12 +14,17 @@
     </div>
 
     <section class="section_1">
-      <div class="people_area" v-lazy-container="{ selector: 'img' }">
-        <div class="people" v-for="source in image_sources">
-          <img class="person" :data-src="source.src" :alt="source.title">
-          <span>{{ source.title }}</span>
-        </div>
-      </div>
+
+        <!-- v-if="index % (count * 2) === 0 || index % ((count * 2) + 1) === 0" -->
+        <ul class="people_area" v-lazy-container="{ selector: 'img' }">
+          <li class="people"  v-for="(source) in image_sources">
+            <div class="person_wrap">
+              <img class="person" :data-src="source.src" :alt="source.title">
+              <div>{{ source.title }}</div>
+            </div>
+          </li>
+        </ul>
+
     </section>
 
   </div>
@@ -28,7 +33,19 @@
 <script>
   export default {
     name: 'people',
+    mounted () {
+      /* Calculate browser width for handle video section */
+      let that = this
+      this.$nextTick(function () {
+        window.addEventListener('resize', function (e) {
+          that.windowWidth = window.innerWidth
+          that.count = Math.floor(window.innerWidth * 0.96 / 300)
+        })
+      })
+    },
     data: () => ({
+      windowWidth: window.innerWidth,
+      count: Math.floor((window.innerWidth * 0.96) / 300),
       image_sources: [
         {
           title: 'temporary image1',
@@ -71,47 +88,60 @@
           src: require('../assets/pages/people/vertical_placeholder.png')
         },
         {
-          title: 'temporary image',
+          title: 'temporary image11',
           src: require('../assets/pages/people/vertical_placeholder.png')
         },
         {
-          title: 'handsome image',
+          title: 'handsome image12',
           src: require('../assets/pages/people/temp_handsome.jpg')
         },
         {
-          title: 'beauty image',
+          title: 'beauty image13',
           src: require('../assets/pages/people/temp_beauty.jpg')
         },
         {
-          title: 'handsome image',
+          title: 'handsome image14',
           src: require('../assets/pages/people/temp_handsome.jpg')
         },
         {
-          title: 'temporary image',
+          title: 'temporary image15',
           src: require('../assets/pages/people/vertical_placeholder.png')
         },
         {
-          title: 'temporary image',
+          title: 'temporary image16',
           src: require('../assets/pages/people/vertical_placeholder.png')
         },
         {
-          title: 'handsome image',
+          title: 'handsome image17',
           src: require('../assets/pages/people/temp_handsome.jpg')
         },
         {
-          title: 'beauty image',
+          title: 'beauty image18',
           src: require('../assets/pages/people/temp_beauty.jpg')
         },
         {
-          title: 'handsome image',
+          title: 'handsome image19',
           src: require('../assets/pages/people/temp_handsome.jpg')
         },
         {
-          title: 'temporary image',
+          title: 'temporary image20',
           src: require('../assets/pages/people/vertical_placeholder.png')
         }
       ]
     })
+    /*
+    methods: {
+      pull_index () {
+        console.log('pullindex')
+        for (var i = 0; i < this.image_sources.length / this.count; i++) {
+          var to = (2 * this.count) * i
+          var too = ((2 * this.count) * i) + 1
+          console.log(to)
+          console.log(too)
+        }
+      }
+    }
+    */
   }
 </script>
 
@@ -130,36 +160,40 @@
   }
 
   .people_area {
-    display: flex;
     text-align: center;
     padding: 0 2%;
     border-radius: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     background-color: #ffffff;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
   .people {
+    display: inline-block;
     width: 100%;
     padding: 0.5em;
-    margin: auto;
     border-radius: 10px;
     max-width: 300px;
     overflow: hidden;
     transition: all 200ms ease-out;
     text-align: center;
-    flex: 1 1 280px;
+    margin: auto;
     &:hover, &:active {
       transform: scale(1.02);
     }
   }
 
+  .person_wrap {
+    height: 480px;
+  }
+
   .person {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 
 </style>
