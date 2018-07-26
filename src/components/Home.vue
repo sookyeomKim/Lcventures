@@ -446,7 +446,7 @@
       float: left;
       z-index: 400;
       //border: 8px solid #d60c47;
-      border: 8px solid #fe7a11;
+      border: 8px solid #019da5;
       background-color: #fefefe;
       ul {
         width: 100%;
@@ -574,7 +574,7 @@
       border-radius: 120%;
       //135deg, #002778 25%, #ffffff 25%, #ffffff 50%, #002778 50%, #002778 75%, #ffffff 75%, #ffffff 100%
       background-image: linear-gradient(
-          135deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
+          135deg, #019DA5 25%, #ffffff 25%, #ffffff 50%, #019DA5 50%, #019DA5 75%, #ffffff 75%, #ffffff 100%
       );
       background-size: 20px 20px;
       right: -48%;
@@ -594,7 +594,7 @@
         font-weight: bold;
         margin: 38px 0 3px;
         //color: #d60c47;
-        color: #fe7a11;
+        color: #019DA5;
       }
       p {
         font-family: 'Nanums_regular', sans-serif;
@@ -642,12 +642,12 @@
         float: right;
         .culture_img {
           float: right;
-          border: 8px solid #fe7a11;
+          border: 8px solid #019DA5;
         }
         .img_border {
           //45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
           background-image: linear-gradient(
-              45deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
+              45deg, #019DA5 25%, #ffffff 25%, #ffffff 50%, #019DA5 50%, #019DA5 75%, #ffffff 75%, #ffffff 100%
           );
           right: 0;
         }
@@ -657,7 +657,7 @@
         .inner_title {
           h4 {
             //color: #002778;
-            color: #fe7a11;
+            color: #019DA5;
           }
         }
       }
@@ -685,12 +685,12 @@
         .culture_img {
           float: right;
           //border: 8px solid #002778;
-          border: 8px solid #fe7a11;
+          border: 8px solid #019DA5;
         }
         .img_border {
           //45deg, #d60c47 25%, #ffffff 25%, #ffffff 50%, #d60c47 50%, #d60c47 75%, #ffffff 75%, #ffffff 100%
           background-image: linear-gradient(
-              45deg, #fe7a11 25%, #ffffff 25%, #ffffff 50%, #fe7a11 50%, #fe7a11 75%, #ffffff 75%, #ffffff 100%
+              45deg, #019DA5 25%, #ffffff 25%, #ffffff 50%, #019DA5 50%, #019DA5 75%, #ffffff 75%, #ffffff 100%
           );
           right: 0;
         }
@@ -700,7 +700,7 @@
         .inner_title {
           h4 {
             //color: #002778;
-            color: #fe7a11;
+            color: #019DA5;
           }
         }
       }

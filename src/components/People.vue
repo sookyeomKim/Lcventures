@@ -15,15 +15,17 @@
 
     <section class="section_1">
 
-        <!-- v-if="index % (count * 2) === 0 || index % ((count * 2) + 1) === 0" -->
-        <ul class="people_area" v-lazy-container="{ selector: 'img' }">
-          <li class="people"  v-for="(source) in image_sources">
-            <div class="person_wrap">
-              <img class="person" :data-src="source.src" :alt="source.title">
-              <div>{{ source.title }}</div>
-            </div>
-          </li>
-        </ul>
+      <div class="memberContainer">
+        <div v-for="(item, index) in person_counter" class="memberWrap" :class="index % 2 === 0 ? 'even' : 'odd'">
+          <ul v-lazy-container="{ selector: 'img'}"> <!-- v-lazy-container="{ selector: 'img' }" -->
+            <li v-for="member in item" class="memberList">
+              <div class="member_team">- {{member.team}}</div>
+              <div class="member_title">{{member.title}} / {{member.position}}</div>
+              <img :src="member.src" :data-src="member.src" :alt="member.title">
+            </li>
+          </ul>
+        </div>
+      </div>
 
     </section>
 
@@ -48,100 +50,216 @@
       count: Math.floor((window.innerWidth * 0.96) / 300),
       image_sources: [
         {
-          title: 'temporary image1',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '권용무',
+          team: '엘씨벤처스 (주)',
+          position: '대표이사',
+          src: require('../assets/pages/people/ymkwon.jpg')
         },
         {
-          title: 'handsome image2',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이세호',
+          team: '마케팅부',
+          position: '부장',
+          src: require('../assets/pages/people/shlee.jpg')
         },
         {
-          title: 'beauty image3',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '노일찬',
+          team: '유통사업부',
+          position: '부장',
+          src: require('../assets/pages/people/icnho.jpg')
         },
         {
-          title: 'handsome image4',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '류진우',
+          team: '마케팅부',
+          position: '차장',
+          src: require('../assets/pages/people/jwryu.jpg')
         },
         {
-          title: 'temporary image5',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '김홍식',
+          team: '마케팅부',
+          position: '차장',
+          src: require('../assets/pages/people/hskim.jpg')
         },
         {
-          title: 'temporary image6',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '이효진',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/hjlee.jpg')
         },
         {
-          title: 'handsome image7',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '전준식',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/jsjeon.jpg')
         },
         {
-          title: 'beauty image8',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '이호원',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/hwlee.jpg')
         },
         {
-          title: 'handsome image9',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '하재륜',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/jrha.jpg')
         },
         {
-          title: 'temporary image10',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '공경환',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/khkong.jpg')
         },
         {
-          title: 'temporary image11',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '진승우',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/swjin.jpg')
         },
         {
-          title: 'handsome image12',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '최지현',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/jhchoe.jpg')
         },
         {
-          title: 'beauty image13',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '김민서',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/mskim.jpg')
         },
         {
-          title: 'handsome image14',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '김준형',
+          team: '컨텐츠사업부',
+          position: '대리',
+          src: require('../assets/pages/people/jhkim.jpg')
         },
         {
-          title: 'temporary image15',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '김수겸',
+          team: '개발사업부',
+          position: '주임',
+          src: require('../assets/pages/people/skkim.jpg')
         },
         {
-          title: 'temporary image16',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '장현정',
+          team: '지원본부',
+          position: '주임',
+          src: require('../assets/pages/people/hjjang.jpg')
         },
         {
-          title: 'handsome image17',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이우준',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/wjlee.jpg')
         },
         {
-          title: 'beauty image18',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '최소영',
+          team: '유통사업부',
+          position: '주임',
+          src: require('../assets/pages/people/sychoe.jpg')
         },
         {
-          title: 'handsome image19',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이로운',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/rwlee.jpg')
         },
         {
-          title: 'temporary image20',
+          title: '변두환',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/dhbeon.jpg')
+        },
+        {
+          title: '이지은',
+          team: '유통사업부',
+          position: '주임',
+          src: require('../assets/pages/people/jelee.jpg')
+        },
+        {
+          title: '김성식',
+          team: '컨텐츠사업부',
+          position: '주임',
+          src: require('../assets/pages/people/sskim.jpg')
+        },
+        {
+          title: '박재현',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/jhpark.jpg')
+        },
+        {
+          title: '여창훈',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/chyeo.jpg')
+        },
+        {
+          title: '류동근',
+          team: '개발사업부',
+          position: '사원',
+          src: require('../assets/pages/people/dgryu.jpg')
+        },
+        {
+          title: '서혜인',
+          team: '유통사업부',
+          position: '사원',
+          src: require('../assets/pages/people/hiseo.jpg')
+        },
+        {
+          title: '유기환',
+          team: '마케팅부',
+          position: '사원',
+          src: require('../assets/pages/people/khyou.jpg')
+        },
+        {
+          title: '이수영',
+          team: '지원본부',
+          position: '사원',
+          src: require('../assets/pages/people/sylee.jpg')
+        },
+        {
+          title: '정순영',
+          team: '마케팅부',
+          position: '사원',
+          src: require('../assets/pages/people/syjeoung.jpg')
+        },
+        {
+          title: '김다연',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/dykim.jpg')
+        },
+        {
+          title: '조미경',
+          team: '컨텐츠사업부',
+          position: '사원',
           src: require('../assets/pages/people/vertical_placeholder.png')
         }
       ]
-    })
-    /*
-    methods: {
-      pull_index () {
-        console.log('pullindex')
-        for (var i = 0; i < this.image_sources.length / this.count; i++) {
-          var to = (2 * this.count) * i
-          var too = ((2 * this.count) * i) + 1
-          console.log(to)
-          console.log(too)
+    }),
+    computed: {
+      person_counter: function () {
+        let tempArry = []
+        let resArry = []
+        let count = this.count
+        for (let i = 0; i < this.image_sources.length; i++) {
+          if (i !== 0 && i % count === 0) {
+            resArry.push(tempArry)
+            tempArry = []
+            tempArry.push(this.image_sources[i])
+            if (i + 1 === this.image_sources.length) {
+              resArry.push(tempArry)
+            }
+          } else {
+            tempArry.push(this.image_sources[i])
+            if (i + 1 === this.image_sources.length) {
+              resArry.push(tempArry)
+            }
+          }
         }
-      }
-    }
-    */
+        return resArry
+      } // person function
+    } // computed
   }
 </script>
 
@@ -162,7 +280,6 @@
   .people_area {
     text-align: center;
     padding: 0 2%;
-    border-radius: 5px;
     background-color: #ffffff;
     &:after {
       content: '';
@@ -171,29 +288,68 @@
     }
   }
 
-  .people {
-    display: inline-block;
-    width: 100%;
-    padding: 0.5em;
-    border-radius: 10px;
-    max-width: 300px;
-    overflow: hidden;
-    transition: all 200ms ease-out;
-    text-align: center;
-    margin: auto;
-    &:hover, &:active {
-      transform: scale(1.02);
+  .memberContainer {
+    .memberWrap {
+      width: 100%;
+      padding: 10px 5%;
+      ul {
+        display: inline-block;
+        .memberList {
+          float: left;
+          width: 255px;
+          transition: all 200ms ease-in-out;
+          position: relative;
+          z-index: 1000;
+          img {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            top: -25px;
+            z-index: 40;
+            transition: all 200ms ease-in-out;
+          }
+          &:hover, &:active {
+            position: relative;
+            z-index: 2000;
+            transform: scale(1.05);
+            img {
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      &:after {
+        content: " ";
+        display: table;
+        clear: both;
+      }
+      &.odd {
+        text-align: right;
+      }
+      &.even {
+        text-align: left;
+      }
     }
   }
 
-  .person_wrap {
-    height: 480px;
+  .member_team {
+    font-family: 'Nanums_regular', sans-serif;
+    color: #019DA5;
+    text-align: left;
+    font-size: 16px;
+    padding: 4px 2px;
   }
 
-  .person {
-    border-radius: 10px;
-    max-width: 100%;
-    max-height: 100%;
+  .member_title {
+    font-family: 'Nanums_regular', sans-serif;
+    color: #414141;
+    text-align: left;
+    font-size: 17px;
+    padding: 2px 10px;
+    position: relative;
+    z-index: 50;
   }
 
 </style>
