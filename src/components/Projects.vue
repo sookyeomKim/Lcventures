@@ -41,83 +41,189 @@
     data: () => ({
       image_sources: [
         {
-          title: 'temporary image1',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '권용무',
+          team: '엘씨벤처스 (주)',
+          position: '대표이사',
+          src: require('../assets/pages/people/ymkwon.jpg')
         },
         {
-          title: 'handsome image2',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이세호',
+          team: '마케팅부',
+          position: '부장',
+          src: require('../assets/pages/people/shlee.jpg')
         },
         {
-          title: 'beauty image3',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '노일찬',
+          team: '유통사업부',
+          position: '부장',
+          src: require('../assets/pages/people/icnho.jpg')
         },
         {
-          title: 'handsome image4',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '류진우',
+          team: '마케팅부',
+          position: '차장',
+          src: require('../assets/pages/people/jwryu.jpg')
         },
         {
-          title: 'temporary image5',
-          src: require('../assets/pages/projects/temporary-0.png')
+          title: '김홍식',
+          team: '마케팅부',
+          position: '차장',
+          src: require('../assets/pages/people/hskim.jpg')
         },
         {
-          title: 'temporary image6',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '이효진',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/hjlee.jpg')
         },
         {
-          title: 'handsome image7',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '전준식',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/jsjeon.jpg')
         },
         {
-          title: 'beauty image8',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '이호원',
+          team: '마케팅부',
+          position: '과장',
+          src: require('../assets/pages/people/hwlee.jpg')
         },
         {
-          title: 'handsome image9',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '하재륜',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/jrha.jpg')
         },
         {
-          title: 'temporary image10',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '공경환',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/khkong.jpg')
         },
         {
-          title: 'temporary image',
-          src: require('../assets/pages/projects/temporary-1.png')
+          title: '진승우',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/swjin.jpg')
         },
         {
-          title: 'handsome image',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '최지현',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/jhchoe.jpg')
         },
         {
-          title: 'beauty image',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '김민서',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/mskim.jpg')
         },
         {
-          title: 'handsome image',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '김준형',
+          team: '컨텐츠사업부',
+          position: '대리',
+          src: require('../assets/pages/people/jhkim.jpg')
         },
         {
-          title: 'temporary image',
-          src: require('../assets/pages/projects/temporary-2.png')
+          title: '김수겸',
+          team: '개발사업부',
+          position: '주임',
+          src: require('../assets/pages/people/skkim.jpg')
         },
         {
-          title: 'temporary image',
-          src: require('../assets/pages/people/vertical_placeholder.png')
+          title: '장현정',
+          team: '지원본부',
+          position: '주임',
+          src: require('../assets/pages/people/hjjang.jpg')
         },
         {
-          title: 'handsome image',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이우준',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/wjlee.jpg')
         },
         {
-          title: 'beauty image',
-          src: require('../assets/pages/people/temp_beauty.jpg')
+          title: '최소영',
+          team: '유통사업부',
+          position: '주임',
+          src: require('../assets/pages/people/sychoe.jpg')
         },
         {
-          title: 'handsome image',
-          src: require('../assets/pages/people/temp_handsome.jpg')
+          title: '이로운',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/rwlee.jpg')
         },
         {
-          title: 'temporary image',
+          title: '변두환',
+          team: '마케팅부',
+          position: '주임',
+          src: require('../assets/pages/people/dhbeon.jpg')
+        },
+        {
+          title: '이지은',
+          team: '유통사업부',
+          position: '주임',
+          src: require('../assets/pages/people/jelee.jpg')
+        },
+        {
+          title: '김성식',
+          team: '컨텐츠사업부',
+          position: '주임',
+          src: require('../assets/pages/people/sskim.jpg')
+        },
+        {
+          title: '박재현',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/jhpark.jpg')
+        },
+        {
+          title: '여창훈',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/chyeo.jpg')
+        },
+        {
+          title: '류동근',
+          team: '개발사업부',
+          position: '사원',
+          src: require('../assets/pages/people/dgryu.jpg')
+        },
+        {
+          title: '서혜인',
+          team: '유통사업부',
+          position: '사원',
+          src: require('../assets/pages/people/hiseo.jpg')
+        },
+        {
+          title: '유기환',
+          team: '마케팅부',
+          position: '사원',
+          src: require('../assets/pages/people/khyou.jpg')
+        },
+        {
+          title: '이수영',
+          team: '지원본부',
+          position: '사원',
+          src: require('../assets/pages/people/sylee.jpg')
+        },
+        {
+          title: '정순영',
+          team: '마케팅부',
+          position: '사원',
+          src: require('../assets/pages/people/syjeoung.jpg')
+        },
+        {
+          title: '김다연',
+          team: '컨텐츠사업부',
+          position: '사원',
+          src: require('../assets/pages/people/dykim.jpg')
+        },
+        {
+          title: '조미경',
+          team: '컨텐츠사업부',
+          position: '사원',
           src: require('../assets/pages/people/vertical_placeholder.png')
         }
       ]
