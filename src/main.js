@@ -25,7 +25,9 @@ Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: require('./assets/common/temp.png'),
   loading: require('./assets/common/lc_logo_square.jpg'),
-  attempt: 1
+  attempt: 2,
+  observer: true,
+  listenEvents: [ 'scroll', 'wheel', 'resize' ]
 })
 
 /* eslint-disable no-new */

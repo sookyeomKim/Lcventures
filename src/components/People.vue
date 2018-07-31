@@ -11,13 +11,20 @@
     <!-- Main Context on video wrap -->
     <div class="main_title">
       <h2>좋은 마케팅, 더 좋은 사람들</h2>
+      <span>- M</span>
+      <span>E</span>
+      <span>M</span>
+      <span>B</span>
+      <span>E</span>
+      <span>R</span>
+      <span>S</span>
     </div>
 
     <section class="section_1">
 
       <div class="memberContainer">
         <div v-for="(item, index) in person_counter" class="memberWrap" :class="index % 2 === 0 ? 'even' : 'odd'">
-          <ul v-lazy-container="{ selector: 'img'}"> <!-- v-lazy-container="{ selector: 'img' }" -->
+          <ul > <!-- v-lazy-container="{ selector: 'img' }" -->
             <li v-for="member in item" class="memberList">
               <div class="member_team">- {{member.team}}</div>
               <div class="member_title">{{member.title}} / {{member.position}}</div>
@@ -265,6 +272,19 @@
 
 <style lang="scss" scoped>
 
+  .main_title {
+    .table {
+      position: relative;
+      width: 320px;
+      z-index: 500;
+      padding: 20px 0 0 5%;
+      div {
+        padding: 4px 0;
+        font-size: 17px;
+      }
+    }
+  }
+
   /* Section Part */
   .section_1, .section_2, .section_3, .section_4 {
     width: 100%;
@@ -275,17 +295,6 @@
     font-family: Impact, sans-serif;
     z-index: 2000;
     min-height: 700px;
-  }
-
-  .people_area {
-    text-align: center;
-    padding: 0 2%;
-    background-color: #ffffff;
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
   }
 
   .memberContainer {

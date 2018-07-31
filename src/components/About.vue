@@ -9,7 +9,7 @@
     <!-- Main Context on video wrap -->
     <div class="main_title">
       <h2>LCVENTURES</h2>
-      <span>C</span>
+      <span>- C</span>
       <span>O</span>
       <span>M</span>
       <span>P</span>
