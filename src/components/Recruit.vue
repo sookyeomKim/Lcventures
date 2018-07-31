@@ -10,7 +10,14 @@
 
     <!-- Main Context on video wrap -->
     <div class="main_title">
-      <h2>엘씨벤처스에 지원해주세요.</h2>
+      <h2>엘씨벤처스에 지원해주세요</h2>
+      <span>- R</span>
+      <span>E</span>
+      <span>C</span>
+      <span>R</span>
+      <span>U</span>
+      <span>I</span>
+      <span>T</span>
     </div>
 
     <section class="section_1">

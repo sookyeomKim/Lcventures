@@ -11,8 +11,15 @@
 
     <!-- Main Context on video wrap -->
     <div class="main_title">
-      <h2>오늘 우리의 크리에이티브는</h2>
-      <h2>내일 당신의 표준이 됩니다.</h2>
+      <h2>우리의 발자취</h2>
+      <span>- P</span>
+      <span>R</span>
+      <span>O</span>
+      <span>J</span>
+      <span>E</span>
+      <span>C</span>
+      <span>T</span>
+      <span>S</span>
     </div>
 
     <section class="section_1">
@@ -232,6 +239,19 @@
 </script>
 
 <style lang="scss" scoped>
+
+  .main_title {
+    .table {
+      position: relative;
+      width: 320px;
+      z-index: 500;
+      padding: 20px 0 0 5%;
+      div {
+        padding: 4px 0;
+        font-size: 17px;
+      }
+    }
+  }
 
   .section_1 {
     background-color: #ffffff;
