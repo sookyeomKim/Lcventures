@@ -728,7 +728,12 @@
     }
     .culture_text {
       width: 100%;
+      text-align: center;
+      .division_bar_small {
+        margin: 8px auto 15px;
+      }
     }
+
     .side_text {
       display: none;
     }

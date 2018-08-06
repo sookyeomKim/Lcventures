@@ -6,18 +6,26 @@
     <div class="video_basket" id="video_basket">
 
       <!-- Youtube -->
-      <!--
+
       <iframe v-if="windowWidth > 835" class="video" id="video" type="text/html"
-              src="https://www.youtube.com/embed/K0lL1HysGMc?&version=3&autoplay=1&loop=1&playlist=K0lL1HysGMc&showinfo=0&fs=0&disablekb=1&vq=auto&controls=0&rel=0&end=75"
-              frameborder="0" volume="0" allowfullscreen webkitallowfullscreen mozallowfullscreen>
+              src="https://www.youtube.com/embed/bDmuCtaRcZM?&autoplay=1&loop=1&playlist=bDmuCtaRcZM&showinfo=0&fs=0&disablekb=1&vq=auto&controls=0&rel=0&iv_load_policy=3&mute=1"
+              allow="autoplay" frameborder="0" volume="0" allowfullscreen webkitallowfullscreen mozallowfullscreen>
       </iframe>
-      -->
 
       <!-- Vimeo -->
+<!--
       <iframe v-if="windowWidth > 835" class="video" id="video"
               src="https://player.vimeo.com/video/221257502?autoplay=1&loop=1&color=ffffff&background=1&title=0&byline=0&portrait=0&controls=0"
               width="100%" height="100%" frameborder="0" volume="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
       </iframe>
+-->
+      <!-- Video file -->
+<!--
+      <video v-if="windowWidth > 835" class="video" id="video" loop autoplay>
+        <source src="./assets/common/files/lc_sample.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.</p>
+      </video>
+-->
 
       <!-- Cover Image when replaced instead video -->
       <img v-else class="video_cover" src="./assets/pages/home/unsplash2.jpg" alt="Main Cover Image" />
@@ -25,7 +33,7 @@
     </div>
 
     <div class="guide_to_scroll">
-      <p class="guide_text">엘씨벤처스 더 보기</p>
+      <!--<p class="guide_text">엘씨벤처스 더 보기</p>-->
       <img class="down_img" src="./assets/common/scroll_down.png" alt="Scroll down image">
       <!--<img class="down_img" src="./assets/pages/home/home_scroll.png" alt="Scroll down image">-->
     </div>
@@ -87,7 +95,7 @@
     height: 100%;
     pointer-events: none;
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: 30;
   }
 
