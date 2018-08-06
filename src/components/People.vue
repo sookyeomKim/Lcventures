@@ -24,7 +24,7 @@
 
       <div class="memberContainer">
         <div v-for="(item, index) in person_counter" class="memberWrap" :class="index % 2 === 0 ? 'even' : 'odd'">
-          <ul > <!-- v-lazy-container="{ selector: 'img' }" -->
+          <ul> <!-- v-lazy-container="{ selector: 'img' }" -->
             <li v-for="member in item" class="memberList">
               <div class="member_team">- {{member.team}}</div>
               <div class="member_title">{{member.title}} / {{member.position}}</div>
@@ -73,6 +73,12 @@
           team: '유통사업부',
           position: '부장',
           src: require('../assets/pages/people/icnho.jpg')
+        },
+        {
+          title: '박우복',
+          team: '유통사업부',
+          position: '부장',
+          src: require('../assets/pages/people/vertical_placeholder.png')
         },
         {
           title: '류진우',
@@ -141,6 +147,18 @@
           src: require('../assets/pages/people/jhkim.jpg')
         },
         {
+          title: '이상아',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/vertical_placeholder.png')
+        },
+        {
+          title: '이우준',
+          team: '마케팅부',
+          position: '대리',
+          src: require('../assets/pages/people/wjlee.jpg')
+        },
+        {
           title: '김수겸',
           team: '개발사업부',
           position: '주임',
@@ -151,12 +169,6 @@
           team: '지원본부',
           position: '주임',
           src: require('../assets/pages/people/hjjang.jpg')
-        },
-        {
-          title: '이우준',
-          team: '마케팅부',
-          position: '주임',
-          src: require('../assets/pages/people/wjlee.jpg')
         },
         {
           title: '최소영',
@@ -246,9 +258,11 @@
     }),
     computed: {
       person_counter: function () {
+        let shuffle = this.image_sources[Math.floor(Math.random() * this.image_sources.length)]
         let tempArry = []
         let resArry = []
         let count = this.count
+        console.log(shuffle)
         for (let i = 0; i < this.image_sources.length; i++) {
           if (i !== 0 && i % count === 0) {
             resArry.push(tempArry)
@@ -312,7 +326,7 @@
           img {
             position: relative;
             max-width: 100%;
-            max-height: 100%;
+            max-height: 348px;
             min-width: 100%;
             min-height: 100%;
             top: -25px;

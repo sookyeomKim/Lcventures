@@ -8,7 +8,7 @@
     <!-- Main Context on video wrap -->
     <div class="main_title">
       <h2>항상 고객과 함께 합니다</h2>
-      <span>C</span>
+      <span>- C</span>
       <span>O</span>
       <span>N</span>
       <span>S</span>
@@ -21,14 +21,43 @@
     </div>
 
     <section class="section_1">
-      <input class="name fill" type="text" placeholder="Name">
-      <input class="position fill" type="text" placeholder="Position">
-      <input class="company fill" type="text" placeholder="Organization">
-      <input class="email fill" type="text" placeholder="E-mail">
-      <input class="phone fill" type="number" placeholder="Phone">
-      <input class="describe fill" type="text" placeholder="Describe">
-      <input class="file" type="file" placeholder="file">
-      <input class="check" type="checkbox">
+      <div>
+        <div class="input_label">이름</div>
+        <input type="text" class="name fill" placeholder="">
+      </div>
+      <div>
+        <div class="input_label">직책</div>
+        <input type="text" class="position fill" placeholder="">
+      </div>
+      <div>
+        <div class="input_label">소속</div>
+        <input type="text" class="company fill" placeholder="">
+      </div>
+      <div>
+        <div class="input_label">이메일</div>
+        <input type="text" class="email fill" placeholder="">
+      </div>
+      <div>
+        <div class="input_label">전화번호</div>
+        <input type="number" class="phone fill" placeholder="">
+      </div>
+      <div>
+        <div class="input_label">설명</div>
+        <textarea class="describe fill area" placeholder=""></textarea>
+      </div>
+      <div>
+        <div class="input_label">첨부파일</div>
+        <input type="file" class="file" placeholder="file">
+      </div>
+<!--
+      <div>
+        <input type="checkbox" class="check">
+        <span class="check_label">정보제공에 동의합니다.</span>
+      </div>
+-->
+      <div>
+        <input type="button" class="submit" value="문의하기">
+      </div>
     </section>
 
   </div>
@@ -57,7 +86,7 @@
 
   .section_1, .section_2, .section_3 {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 4%;
     background-color: #ffffff;
     text-align: center;
     color: #515151;
@@ -66,15 +95,60 @@
   }
 
   .section_1 {
-    input {
+    .input_label {
+      font-family: 'Nanums_regular', sans-serif;
+      font-size: 14px;
+      color: #019DA5;
+      text-align: left;
+      margin-top: 20px;
+    }
+    .check_label {
+      font-family: 'Nanums_regular', sans-serif;
+      font-size: 14px;
+      color: #c1c1c1;
+      float: left;
+    }
+    .check {
+      width: 25px !important;
+      float: left;
+    }
+
+    input, textarea {
+      font-family: 'Nanums_regular', sans-serif;
+      width: 100%;
       &:focus {
         outline: none;
       }
-      padding: 5px 5px;
+      padding: 5px 10px;
     }
+
     .fill{
       border: none;
       border-bottom: 1px solid #ededed;
+    }
+
+    .area {
+      height: 200px;
+      padding: 10px 10px;
+    }
+
+    .submit {
+      border-radius: 5px;
+      background-color: #019DA5;
+      color: #efefef;
+      font-weight: bold;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      &:hover, &:active {
+        background-color: #01AEB7;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
     }
   }
 </style>
